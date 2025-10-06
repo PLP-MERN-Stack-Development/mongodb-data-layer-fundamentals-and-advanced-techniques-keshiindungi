@@ -32,8 +32,8 @@ Database: plp_bookstore
 
 Collection: books
 
-✅ Expected Output
+ Expected Output
 
 Successfully inserted book records
 
-Console output showing query results, aggregations, and index performance
+Console output showing query results, aggregations, and index performance.

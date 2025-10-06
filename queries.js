@@ -50,19 +50,16 @@ async function run() {
     console.log(`\n Deleted book titled "${titleToDelete}"`);
     console.log(deleteResult);
 
-    // --- Task 3: Advanced Queries ---
     console.log("\nTASK 3: ADVANCED QUERIES");
 
-    // 1 Find books in stock and published after 2010
-    const inStockAfter2010 = await books
+       const inStockAfter2010 = await books
       .find({ in_stock: true, published_year: { $gt: 2010 } })
       .project({ title: 1, author: 1, price: 1, _id: 0 })
       .toArray();
     console.log("\n In-stock books published after 2010:");
     console.log(inStockAfter2010);
 
-    // 2 Sort by price ascending
-    const sortedAsc = await books
+      const sortedAsc = await books
       .find({})
       .sort({ price: 1 })
       .project({ title: 1, author: 1, price: 1, _id: 0 })
